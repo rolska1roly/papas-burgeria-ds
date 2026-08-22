@@ -1,5 +1,6 @@
 #include <nds.h>
 #include <nds/ndstypes.h>
+#include <nds/system.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -54,6 +55,7 @@ typedef struct {
 } TouchButton;
 
 Game game;
+touchPosition touch;
 
 // Define touch buttons for burger assembly
 TouchButton buttons[] = {
