@@ -14,7 +14,9 @@ jobs:
 
       - name: Compile NDS
         run: |
-          source /etc/profile.d/devkit-env.sh
+          export DEVKITPRO=/opt/devkitpro
+          export DEVKITARM=$DEVKITPRO/devkitARM
+          export PATH=$DEVKITPRO/tools/bin:$DEVKITARM/bin:$PATH
           make
 
       - name: Upload NDS File
@@ -23,3 +25,4 @@ jobs:
           name: papas-burgeria-nds
           path: "*.nds"
 
+6
